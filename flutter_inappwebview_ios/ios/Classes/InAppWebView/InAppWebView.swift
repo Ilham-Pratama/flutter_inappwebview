@@ -763,7 +763,7 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
             let newContentOffset = change?[.newKey] as? CGPoint
             let oldContentOffset = change?[.oldKey] as? CGPoint
             let startedByUser = scrollView.isDragging || scrollView.isDecelerating
-            if #available(iOS 17.2, *) {More actions
+            if #available(iOS 17.2, *) {
                 if let y = newContentOffset?.y {
                     if(!startedByUser && scrollView.contentInset.bottom < 0.0 && y <= scrollView.contentInset.bottom) {
                         scrollView.contentOffset = oldContentOffset ?? .zero
